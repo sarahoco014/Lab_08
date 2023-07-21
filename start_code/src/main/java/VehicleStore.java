@@ -36,6 +36,7 @@ public class VehicleStore {
         Speedboat boat = new Speedboat(300, 120, new Product("Wally 48 tender X", 1200000, 2),
                 new Motor(450, 80), "Carbon Fibre");
         vehicles.add(boat);
+        boat.startEngine();
 
         Kayak kayak = new vehicles.water.Kayak(
                 30,
