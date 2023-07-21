@@ -3,27 +3,28 @@ package vehicles;
 public class Motor implements IMotorised {
 
     private int hp;
-    private IMotorised engine;
+    private int fuel;
 
-    public Motor(int hp) {
+    public Motor(int hp, int fuel) {
         this.hp = hp;
+        this.fuel = fuel;
     }
 
     @Override
     public void startEngine() {
-        this.engine.startEngine();
+        System.out.println("Turning on motor. Let's go explore the big blue!");
 
     }
 
     @Override
     public void stopEngine() {
-        this.engine.stopEngine();
+        System.out.println("Turning off motor. Let's just enjoy the sun and sea for a while.");
 
     }
 
     @Override
     public int getHp() {
-        return hp;
+        return this.hp;
     }
 
     @Override
@@ -33,12 +34,12 @@ public class Motor implements IMotorised {
 
     @Override
     public int getFuel() {
-        return this.engine.getFuel();
+        return this.fuel;
     }
 
     @Override
     public void setFuel(int fuel) {
-        this.engine.setFuel(fuel);
+        this.fuel = fuel;
 
     }
 

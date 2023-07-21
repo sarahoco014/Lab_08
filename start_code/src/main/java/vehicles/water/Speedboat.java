@@ -1,4 +1,4 @@
-package water;
+package vehicles.water;
 
 import products.IProduct;
 import vehicles.IMotorised;
@@ -9,13 +9,11 @@ public class Speedboat extends Vehicle implements IMotorised, IWaterVehicle {
 
      private String hullType;
      private IMotorised motor;
-     private IMotorised engine;
 
-     public Speedboat(float weight, int maxSpeed, IProduct baseProduct, String hullType, IMotorised motor, IMotorised engine) {
+     public Speedboat(float weight, int maxSpeed, IProduct baseProduct, IMotorised motor, String hullType) {
           super(weight, maxSpeed, baseProduct);
           this.hullType = hullType;
           this.motor = motor;
-          this.engine = engine;
      }
 
      @Override
@@ -39,35 +37,35 @@ public class Speedboat extends Vehicle implements IMotorised, IWaterVehicle {
 
      @Override
      public void startEngine() {
-         this.engine.startEngine();
+         this.motor.startEngine();
 
      }
 
      @Override
      public void stopEngine() {
-         this.engine.stopEngine();
+         this.motor.stopEngine();
 
      }
 
      @Override
      public int getHp() {
-          return this.engine.getHp();
+          return this.motor.getHp();
      }
 
      @Override
      public void setHp(int hp) {
-         this.engine.setHp(hp);
+         this.motor.setHp(hp);
 
      }
 
      @Override
      public int getFuel() {
-          return this.engine.getFuel();
+          return this.motor.getFuel();
      }
 
      @Override
      public void setFuel(int fuel) {
-         this.engine.setFuel(fuel);
+         this.motor.setFuel(fuel);
 
      }
 

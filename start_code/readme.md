@@ -3,7 +3,7 @@
 As you can see in the source code, much of the class diagram below has already been implemented, but not all of it.
 Please study the diagram and **create and implement the missing interfaces and classes**, then test them in `VehicleStore`.
 
-Hint: notice that we created a package called `land` for land-specific classes and interfaces. Consider creating a `water` package in kind.
+Hint: notice that we created a package called `land` for land-specific classes and interfaces. Consider creating a `vehicles.water` package in kind.
 
 ![](composition-loose-coupled.png)
 
